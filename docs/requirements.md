@@ -12,8 +12,8 @@ To develop a cinema system that implements:
 
 + Theaters
 + Sessions
-+ Ssession tickets
-+ Interactice simulation of the customers flow
++ Session tickets
++ Interactive simulation of the customers flow
 
 ___
 > Разработать систему кинотеатра, которая реализует:
