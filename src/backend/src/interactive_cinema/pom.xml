@@ -6,12 +6,10 @@
   <version>1.0-SNAPSHOT</version>
   <name>interactive_cinema</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <junit.jupiter.version>5.11.2</junit.jupiter.version>
     <junit.platform.version>1.11.2</junit.platform.version>
   </properties>
-  
   <build>
     <pluginManagement>
       <plugins>
@@ -37,11 +35,14 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.5.1</version>
-      </plugin>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+  
   <modules>
     <module>domain</module>
+    <module>usecase</module>
+    <module>adapter/checkpoint/stdcheckpoint</module>
   </modules>
 </project>
