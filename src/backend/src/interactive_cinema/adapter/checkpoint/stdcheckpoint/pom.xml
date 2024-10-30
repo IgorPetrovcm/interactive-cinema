@@ -17,27 +17,9 @@
 
   <build>
     <plugins>
-      <!-- <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-      </plugin> -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <descriptorRefs>
-            <descriptionRef>jar-with-dependencies</descriptionRef>
-          </descriptorRefs>
-          <archive/>
-        </configuration>
       </plugin>
     </plugins>
   </build>
