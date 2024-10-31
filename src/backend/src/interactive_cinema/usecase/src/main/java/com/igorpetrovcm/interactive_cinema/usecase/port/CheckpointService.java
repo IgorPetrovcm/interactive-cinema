@@ -1,7 +1,7 @@
 package com.igorpetrovcm.interactive_cinema.usecase.port;
 
 public interface CheckpointService{
-    void let();
+    void let() throws CheckpointServiceException;
 
-    void let(int sleepTime);
+    void let(int sleepTime) throws CheckpointServiceException;
 }
