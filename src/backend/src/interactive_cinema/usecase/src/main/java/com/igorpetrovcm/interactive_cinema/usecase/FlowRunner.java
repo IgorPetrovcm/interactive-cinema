@@ -4,6 +4,8 @@ package com.igorpetrovcm.interactive_cinema.usecase;
 import com.igorpetrovcm.interactive_cinema.domain.Flow;
 import com.igorpetrovcm.interactive_cinema.domain.FlowException;
 import com.igorpetrovcm.interactive_cinema.usecase.port.CheckpointService;
+import com.igorpetrovcm.interactive_cinema.usecase.port.CheckpointServiceException;
+
 import java.util.Random;
 import java.util.Map.Entry;
 
@@ -38,14 +40,18 @@ public class FlowRunner implements Interactor<Object, Flow>{
             Thread
                 .ofPlatform()
                 .name("flow" + flowCount + "-visitor-" + flow.getNumberOfVisitors())
-                .start(() -> { 
-                    checkpoint.let(sleepTime);
+                .start(() -> {
+                    try {
+                        checkpoint.let(sleepTime);
+                    }
+                    catch (CheckpointServiceException exe){
+                        exe.printStackTrace();
+                    }
                     /**
                     * This section of code needs to be logged
                     * Этот участок кода нужно логгировать
                     */
                 });
-            
             try{
                 flow.completeVisitor();
             }
